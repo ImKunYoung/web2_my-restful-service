@@ -22,4 +22,10 @@ public class HelloWorldController {
         return new HelloWorldBean(String.format("Hello World, %s", name));
     }
 
+    @GetMapping(path = "/hello-world-been/path-variable/{name}/{id}")
+    public HelloWorldBean helloWorldBean(@PathVariable("name") String name, @PathVariable("id") String id) {
+        return new HelloWorldBean(String.format("Hello World, %s %s", name, id));
+    }
+
+
 }

@@ -115,10 +115,13 @@ public class HelloWorldBean {
 }
 ```
 
+<br/>
+
 - api 호출 결과
 
 ![](readmefile/img.png)
 
+<br/>
 
 ## ✔️ 디버그 모드로 설정
 
@@ -1375,8 +1378,23 @@ public HelloWorldBean helloWorldBean(@PathVariable String name) {
 }
 ```
 
-<br/>
-
-- 실행 결과
+- 호출 결과
 
 ![](readmefile/img_2.png)
+
+<br/>
+
+## ✔ URI를 통해 2개의 가변 변수 받아오기
+
+- HelloWorldController에 API 추가
+
+```java
+@GetMapping(path = "/hello-world-been/path-variable/{name}/{id}")
+public HelloWorldBean helloWorldBean(@PathVariable("name") String name, @PathVariable("id") String id) {
+    return new HelloWorldBean(String.format("Hello World, %s %s", name, id));
+}
+```
+
+- 호출 결과
+
+![](readmefile/img_3.png)
