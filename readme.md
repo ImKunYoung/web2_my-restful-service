@@ -1,4 +1,4 @@
-## 라이브러리 추가
+## ✔️ 라이브러리 추가
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -62,6 +62,13 @@
 
 </project>
 ```
+
+| 키워드              | 내용    |
+|:-----------------|:------|
+| spring-boot-starter-web | Starter for building web, including RESTful, applications using Spring MVC. Uses Tomcat as the default embedded container|
+| spring-boot-starter-test | Starter for testing Spring Boot applications with libraries including JUnit Jupiter, Hamcrest and Mockito |
+| spring-boot-devtools | https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html |
+
 
 ## ✔️ properties 추가
 
