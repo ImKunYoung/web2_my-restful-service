@@ -21,18 +21,46 @@ public class CalculateControllerTest {
 
     @Test
     public void add() throws Exception {
-        mvc.perform(get("/calculate/add/7/6")).andExpect(status().isOk()).andExpect(jsonPath("$.result", is(13)));
+        String a = "7";
+        String b = "6";
+
+        int result = Integer.parseInt(a) + Integer.parseInt(b);
+
+        mvc.perform(get("/calculate/add/"+a+"/"+b))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.result", is(13)));
     }
     @Test
     public void minus() throws Exception {
-        mvc.perform(get("/calculate/minus/7/6")).andExpect(status().isOk()).andExpect(jsonPath("$.result", is(1)));
+        String a = "7";
+        String b = "6";
+
+        int result = Integer.parseInt(a) - Integer.parseInt(b);
+
+        mvc.perform(get("/calculate/minus/"+a+"/"+b))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.result", is(result)));
     }
     @Test
     public void multiply() throws Exception {
-        mvc.perform(get("/calculate/multiply/7/6")).andExpect(status().isOk()).andExpect(jsonPath("$.result", is(42)));
+        String a = "7";
+        String b = "6";
+
+        int result = Integer.parseInt(a) * Integer.parseInt(b);
+
+        mvc.perform(get("/calculate/multiply/"+a+"/"+b))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.result", is(result)));
     }
     @Test
     public void divide() throws Exception {
-        mvc.perform(get("/calculate/divide/7/6")).andExpect(status().isOk()).andExpect(jsonPath("$.result", is(1.166)));
+        String a = "7";
+        String b = "6";
+
+        float result = Float.parseFloat(a) / Float.parseFloat(b);
+
+        mvc.perform(get("/calculate/divide/"+a+"/"+b))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.result", is(String.format("%.2f", result))));
     }
 }

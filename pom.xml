@@ -13,9 +13,6 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>web2_my-restful-service</name>
     <description>web2_my-restful-service</description>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>

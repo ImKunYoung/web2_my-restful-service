@@ -25,9 +25,7 @@ public class CalculateController {
     }
     @GetMapping("/divide/{a}/{b}")
     public Object divide(@PathVariable("a") float a, @PathVariable("b") float b, Model model) {
-        return ResponseEntity.ok(model.addAttribute("result", a/b));
+        return ResponseEntity.ok(model.addAttribute("result", String.format("%.2f", a/b)));
     }
-
-
 
 }
