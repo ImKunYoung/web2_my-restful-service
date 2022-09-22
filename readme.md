@@ -114,7 +114,7 @@ public class CalculateControllerTest {
 
 <br/> 
 
-- 포스트맨 API 테스트 도구 테스트 결과
+- 포스트맨 API 명세서
 
 > https://documenter.getpostman.com/view/23389689/2s7ZE4MkCz
 
